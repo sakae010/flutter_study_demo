@@ -1,7 +1,33 @@
 import 'package:flutter/material.dart';
+import 'package:window_location_href/window_location_href.dart';
 import 'package:flutter_study_demo/widget/controller_demo_page.dart'
     deferred as controller_demo_page;
-import 'package:window_location_href/window_location_href.dart';
+import 'package:flutter_study_demo/widget/clip_demo_page.dart'
+    deferred as clip_demo_page;
+import 'package:flutter_study_demo/widget/scroll_listener_demo_page.dart'
+    deferred as scroll_listener_demo_page;
+import 'package:flutter_study_demo/widget/scroll_to_index_demo_page.dart'
+    deferred as scroll_to_index_demo_page;
+import 'package:flutter_study_demo/widget/scroll_to_index_demo_page2.dart'
+    deferred as scroll_to_index_demo_page2;
+import 'package:flutter_study_demo/widget/gradient_text_demo_page.dart'
+    deferred as gradient_text_demo_page;
+import 'package:flutter_study_demo/widget/transform_demo_page.dart'
+    deferred as transform_demo_page;
+import 'package:flutter_study_demo/widget/text_line_height_demo_page.dart'
+    deferred as text_line_height_demo_page;
+import 'package:flutter_study_demo/widget/refresh_demo_page.dart'
+    deferred as refresh_demo_page;
+import 'package:flutter_study_demo/widget/refresh_demo_page2.dart'
+    deferred as refresh_demo_page2;
+import 'package:flutter_study_demo/widget/custom_pull/refresh_demo_page3.dart'
+    deferred as refresh_demo_page3;
+import 'package:flutter_study_demo/widget/positioned_demo_page.dart'
+    deferred as positioned_demo_page;
+import 'package:flutter_study_demo/widget/bubble/bubble_demo_page.dart'
+    deferred as bubble_demo_page;
+import 'package:flutter_study_demo/widget/tag_demo_page.dart'
+    deferred as tag_demo_page;
 
 void main() {
   runApp(const MyApp());
@@ -28,6 +54,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: const MyHomePage(title: 'Flutter Demos'),
+      routes: routers,
     );
   }
 }
@@ -145,5 +172,69 @@ Map<String, WidgetBuilder> routers = {
         (context) {
       return controller_demo_page.ControllerDemoPage();
     });
-  }
+  },
+  "实现控件圆角不同组合": (context) {
+    return ContainerAsyncRouterPage(clip_demo_page.loadLibrary(), (context) {
+      return clip_demo_page.ClipDemoPage();
+    });
+  },
+  "列表滑动监听": (context) {
+    return ContainerAsyncRouterPage(scroll_listener_demo_page.loadLibrary(),
+        (context) {
+      return scroll_listener_demo_page.ScrollListenerDemoPage();
+    });
+  },
+  "滚动到指定位置": (context) {
+    return ContainerAsyncRouterPage(scroll_to_index_demo_page.loadLibrary(),
+        (context) => scroll_to_index_demo_page.ScrollToIndexDemoPage());
+  },
+  "滚动到指定位置2": (context) {
+    return ContainerAsyncRouterPage(scroll_to_index_demo_page2.loadLibrary(),
+        (context) => scroll_to_index_demo_page2.ScrollToIndexDemoPage2());
+  },
+  "展示渐变带边框的文本": (context) {
+    return ContainerAsyncRouterPage(gradient_text_demo_page.loadLibrary(),
+        (context) => gradient_text_demo_page.GradientTextDemoPage());
+  },
+  "Transform 效果展示": (context) {
+    return ContainerAsyncRouterPage(transform_demo_page.loadLibrary(),
+        (context) => transform_demo_page.TransformDemoPage());
+  },
+  "计算另类文本行间距展示": (context) {
+    return ContainerAsyncRouterPage(text_line_height_demo_page.loadLibrary(),
+        (context) => text_line_height_demo_page.TextLineHeightDemoPage());
+  },
+  "简单上下刷新": (context) {
+    return ContainerAsyncRouterPage(refresh_demo_page.loadLibrary(), (context) {
+      return refresh_demo_page.RefreshDemoPage();
+    });
+  },
+  "简单上下刷新2": (context) {
+    return ContainerAsyncRouterPage(refresh_demo_page2.loadLibrary(),
+        (context) {
+      return refresh_demo_page2.RefreshDemoPage2();
+    });
+  },
+  "简单上下刷新3": (context) {
+    return ContainerAsyncRouterPage(refresh_demo_page3.loadLibrary(),
+        (context) {
+      return refresh_demo_page3.RefreshDemoPage3();
+    });
+  },
+  "通过绝对定位布局": (context) {
+    return ContainerAsyncRouterPage(positioned_demo_page.loadLibrary(),
+        (context) {
+      return positioned_demo_page.PositionedDemoPage();
+    });
+  },
+  "气泡提示框": (context) {
+    return ContainerAsyncRouterPage(bubble_demo_page.loadLibrary(), (context) {
+      return bubble_demo_page.BubbleDemoPage();
+    });
+  },
+  "Tag效果展示": (context) {
+    return ContainerAsyncRouterPage(tag_demo_page.loadLibrary(), (context) {
+      return tag_demo_page.TagDemoPage();
+    });
+  },
 };

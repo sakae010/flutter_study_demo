@@ -20,6 +20,23 @@ version: 1.0.0+1
 environment:
   sdk: ">=2.16.1 <3.0.0"
 
+deferred-components:
+  - name: crane
+    libraries:
+      - package:flutter_study_demo/widget/clip_demo_page.dart
+      - package:flutter_study_demo/widget/controller_demo_page.dart
+      - package:flutter_study_demo/widget/scroll_listener_demo_page.dart
+      - package:flutter_study_demo/widget/scroll_to_index_demo_page.dart
+      - package:flutter_study_demo/widget/scroll_to_index_demo_page2.dart
+      - package:flutter_study_demo/widget/gradient_text_demo_page.dart
+      - package:flutter_study_demo/widget/transform_demo_page.dart
+      - package:flutter_study_demo/widget/text_line_height_demo_page.dart
+      - package:flutter_study_demo/widget/refresh_demo_page.dart
+      - package:flutter_study_demo/widget/refresh_demo_page2.dart
+      - package:flutter_study_demo/widget/custom_pull/refresh_demo_page3.dart
+      - package:flutter_study_demo/widget/positioned_demo_page.dart
+      - package:flutter_study_demo/widget/bubble/bubble_demo_page.dart
+      - package:flutter_study_demo/widget/tag_demo_page.dart
 # Dependencies specify other packages that your package needs in order to work.
 # To automatically upgrade your package dependencies to the latest versions
 # consider running `flutter pub upgrade --major-versions`. Alternatively,
@@ -34,6 +51,7 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
   window_location_href: 1.0.0
+  scroll_to_index: ^2.1.1
 
 dev_dependencies:
   flutter_test:
@@ -57,8 +75,8 @@ flutter:
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
-  # assets:
-  #   - images/a_dot_burr.jpeg
+  assets:
+    - static/
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
