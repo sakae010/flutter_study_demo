@@ -37,6 +37,13 @@ deferred-components:
       - package:flutter_study_demo/widget/positioned_demo_page.dart
       - package:flutter_study_demo/widget/bubble/bubble_demo_page.dart
       - package:flutter_study_demo/widget/tag_demo_page.dart
+      - package:flutter_study_demo/widget/honor_demo_page.dart
+      - package:flutter_study_demo/widget/slider_verify_page.dart
+      - package:flutter_study_demo/widget/wrap_content_page.dart
+      - package:flutter_study_demo/widget/statusbar_demo_page.dart
+      - package:flutter_study_demo/widget/keyboard_demo_page.dart
+      - package:flutter_study_demo/widget/anima_demo_page.dart
+      - package:flutter_study_demo/widget/anima_demo_page2.dart
 # Dependencies specify other packages that your package needs in order to work.
 # To automatically upgrade your package dependencies to the latest versions
 # consider running `flutter pub upgrade --major-versions`. Alternatively,

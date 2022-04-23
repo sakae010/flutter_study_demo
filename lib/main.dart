@@ -28,6 +28,20 @@ import 'package:flutter_study_demo/widget/bubble/bubble_demo_page.dart'
     deferred as bubble_demo_page;
 import 'package:flutter_study_demo/widget/tag_demo_page.dart'
     deferred as tag_demo_page;
+import 'package:flutter_study_demo/widget/honor_demo_page.dart'
+    deferred as honor_demo_page;
+import 'package:flutter_study_demo/widget/slider_verify_page.dart'
+    deferred as slider_verify_page;
+import 'package:flutter_study_demo/widget/wrap_content_page.dart'
+    deferred as wrap_content_page;
+import 'package:flutter_study_demo/widget/statusbar_demo_page.dart'
+    deferred as statusbar_demo_page;
+import 'package:flutter_study_demo/widget/keyboard_demo_page.dart'
+    deferred as keyboard_demo_page;
+import 'package:flutter_study_demo/widget/anima_demo_page.dart'
+    deferred as anima_demo_page;
+import 'package:flutter_study_demo/widget/anima_demo_page2.dart'
+    deferred as anima_demo_page2;
 
 void main() {
   runApp(const MyApp());
@@ -235,6 +249,44 @@ Map<String, WidgetBuilder> routers = {
   "Tag效果展示": (context) {
     return ContainerAsyncRouterPage(tag_demo_page.loadLibrary(), (context) {
       return tag_demo_page.TagDemoPage();
+    });
+  },
+  "共享元素跳转效果": (context) {
+    return ContainerAsyncRouterPage(honor_demo_page.loadLibrary(), (context) {
+      return honor_demo_page.HonorDemoPage();
+    });
+  },
+  "滑动验证": (context) {
+    return ContainerAsyncRouterPage(slider_verify_page.loadLibrary(),
+        (context) {
+      return slider_verify_page.SlideVerifyPage();
+    });
+  },
+  "warpContent实现": (context) {
+    return ContainerAsyncRouterPage(wrap_content_page.loadLibrary(), (context) {
+      return wrap_content_page.WrapContentPage();
+    });
+  },
+  "状态栏颜色修改（仅 App）": (context) {
+    return ContainerAsyncRouterPage(statusbar_demo_page.loadLibrary(),
+        (context) {
+      return statusbar_demo_page.StatusBarDemoPage();
+    });
+  },
+  "键盘弹出与监听（仅 App）": (context) {
+    return ContainerAsyncRouterPage(keyboard_demo_page.loadLibrary(),
+        (context) {
+      return keyboard_demo_page.KeyBoardDemoPage();
+    });
+  },
+  "控件动画组合展示（旋转加放大圆）": (context) {
+    return ContainerAsyncRouterPage(anima_demo_page.loadLibrary(), (context) {
+      return anima_demo_page.AnimaDemoPage();
+    });
+  },
+  "控件展开动画效果": (context) {
+    return ContainerAsyncRouterPage(anima_demo_page2.loadLibrary(), (context) {
+      return anima_demo_page2.AnimaDemoPage2();
     });
   },
 };
